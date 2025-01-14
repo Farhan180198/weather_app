@@ -21,11 +21,13 @@ class WeatherCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       width: 342,
       height: 200,
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: backgroundColor,
+        image: DecorationImage(image: AssetImage('images/Rectangle 1.png')),
+        // color: backgroundColor,
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Column(
@@ -80,7 +82,7 @@ class WeatherCard extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-              const SizedBox(width: 14.0),
+              // const SizedBox(width: 14.0),
 
             Text(
               weatherCondition,

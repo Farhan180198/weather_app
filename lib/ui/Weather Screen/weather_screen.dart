@@ -19,7 +19,7 @@ class WeatherCardScreen extends StatelessWidget {
             ]),
       ),
       child: Scaffold(
-        backgroundColor: Color(0xff48319D),
+        backgroundColor: const Color(0xff26347d),
         appBar: AppBar(
           automaticallyImplyLeading: true,
           title: const Text(
@@ -27,7 +27,7 @@ class WeatherCardScreen extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
 
-          backgroundColor: const Color(0xff48319D),
+          backgroundColor: const Color(0xff26347d),
         ),
         body: SingleChildScrollView(
           child: Center(
