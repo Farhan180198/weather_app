@@ -6,6 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //scaffold
     return Scaffold(
       body: Stack(alignment: AlignmentDirectional.bottomStart, children: [
         const SizedBox(
