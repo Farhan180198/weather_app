@@ -26,7 +26,7 @@ class WeatherCard extends StatelessWidget {
       height: 200,
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage('images/Rectangle 1.png')),
+        image: const DecorationImage(image: AssetImage('images/Rectangle 1.png')),
         // color: backgroundColor,
         borderRadius: BorderRadius.circular(16.0),
       ),
