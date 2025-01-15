@@ -26,8 +26,8 @@ class WeatherCardScreen extends StatelessWidget {
             'Weather',
             style: TextStyle(color: Colors.white),
           ),
-
           backgroundColor: const Color(0xff26347d),
+
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -37,12 +37,12 @@ class WeatherCardScreen extends StatelessWidget {
 
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(left: 15.0, right: 15, top: 10),
                   child: TextFormField(
                     decoration: InputDecoration(
                         fillColor: const Color(0xff2E335A),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(20),
                         ),
                         hintStyle: const TextStyle(color: Colors.grey, fontSize: 18),
                         hintText: 'Search for a city or airport',
