@@ -22,7 +22,8 @@ class WeatherCardScreen extends StatelessWidget {
         backgroundColor: const Color(0xff26347d),
         appBar: AppBar(
           automaticallyImplyLeading: true,
-          title: const Text(
+          iconTheme: IconThemeData(color: Colors.white),
+          title:  Text(
             'Weather',
             style: TextStyle(color: Colors.white),
           ),

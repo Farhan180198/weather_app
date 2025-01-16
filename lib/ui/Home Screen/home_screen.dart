@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/customized%20widgets/round_cards.dart';
 
+import '../Weather Screen/weather_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -72,28 +74,36 @@ class HomeScreen extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: 280,
           child: Padding(
-            padding: const EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+            padding: const EdgeInsets.only(top: 0.0, left: 15.0, right: 15.0),
             child: Column(
               children: [
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Hourly Forecast',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Text('Weekly Forecast',
+                    //  Text(
+                    //   'Hourly Forecast',
+                    //   style: TextStyle(
+                    //       color: Colors.white,
+                    //       fontSize: 14,
+                    //       fontWeight: FontWeight.w500),
+                    // ),
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WeatherCardScreen()));
+                    }, child: const Text('Weekly Forecast',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.w500)),
+                            inherit: true,
+                            fontWeight: FontWeight.w500)),),
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WeatherCardScreen()));
+                    }, child: const Text('Hourly Forecast',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            inherit: true,
+                            fontWeight: FontWeight.w500)),),
                   ],
-                ),
-                const SizedBox(
-                  height: 8,
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -139,7 +149,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 6,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
