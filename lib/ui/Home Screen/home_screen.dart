@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //scaffold
     return Scaffold(
+
       body: Stack(alignment: AlignmentDirectional.bottomStart, children: [
         const SizedBox(
           width: double.infinity,
@@ -93,15 +94,15 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            inherit: true,
-                            fontWeight: FontWeight.w500)),),
+                            fontWeight: FontWeight.w500)
+                    ),
+                    ),
                     TextButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>WeatherCardScreen()));
                     }, child: const Text('Hourly Forecast',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            inherit: true,
                             fontWeight: FontWeight.w500)),),
                   ],
                 ),

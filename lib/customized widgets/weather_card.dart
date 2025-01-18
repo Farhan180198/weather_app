@@ -20,19 +20,19 @@ class WeatherCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Container(
 
-      width: 342,
+      // width: 342,
+      width: screenWidth* 0.32,
       height: 200,
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         image: const DecorationImage(image: AssetImage('images/Rectangle 1.png')),
-        // color: backgroundColor,
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -52,7 +52,6 @@ class WeatherCard extends StatelessWidget {
               width: 120,
             ),
           ],),
-          // const SizedBox(height: 4.0),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,9 +63,6 @@ class WeatherCard extends StatelessWidget {
                   color: Colors.white60,
                 ),
               ),
-              // Text(
-              //   '',
-              // ),
             ],
           ),
           const SizedBox(height: 5.0),
@@ -82,7 +78,6 @@ class WeatherCard extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-              // const SizedBox(width: 14.0),
 
             Text(
               weatherCondition,

@@ -22,64 +22,55 @@ class WeatherCardScreen extends StatelessWidget {
         backgroundColor: const Color(0xff26347d),
         appBar: AppBar(
           automaticallyImplyLeading: true,
-          iconTheme: IconThemeData(color: Colors.white),
-          title:  Text(
+          iconTheme: const IconThemeData(color: Colors.white),
+          title:  const Text(
             'Weather',
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: const Color(0xff26347d),
-
         ),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
+        body: ListView(
+          padding: const EdgeInsets.only(left: 15.0, right: 15, top: 10),
 
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15.0, right: 15, top: 10),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        fillColor: const Color(0xff2E335A),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        hintStyle: const TextStyle(color: Colors.grey, fontSize: 18),
-                        hintText: 'Search for a city or airport',
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.only(left: 10.0),
-                          child: Icon(
-                            Icons.search,
-                            color: Colors.grey,
-                            size: 30.0,
-                          ),
-                        )),
+          children: [
+            TextFormField(
+              decoration: InputDecoration(
+                  fillColor: const Color(0xff2E335A),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                ),
-                const WeatherCard(
-                    location: 'Montreal, Canada',
-                    weatherCondition: 'Mid Rain',
-                    temperature: '19°',
-                    highLowTemperature: 'H:24°  L:18°',
-                    iconPath: 'images/Moon cloud mid rain.png'),
-                const SizedBox(height: 5),
-                const WeatherCard(
-                    location: 'Toronto, Canada',
-                    weatherCondition: 'Fast Wind',
-                    temperature: '20°',
-                    highLowTemperature: 'H:19°  L:21°',
-                    iconPath: 'images/Moon cloud fast wind.png'),
-                const SizedBox(height: 5),
-                const WeatherCard(
-                    location: 'Tokyo, Japan',
-                    weatherCondition: 'Showers',
-                    temperature: '13°',
-                    highLowTemperature: 'H:16°  L:8°',
-                    iconPath: 'images/Sun cloud angled rain.png'),
-              ],
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 18),
+                  hintText: 'Search for a city or airport',
+                  prefixIcon: const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                      size: 30.0,
+                    ),
+                  )),
             ),
-          ),
+            const WeatherCard(
+                location: 'Montreal, Canada',
+                weatherCondition: 'Mid Rain',
+                temperature: '19°',
+                highLowTemperature: 'H:24°  L:18°',
+                iconPath: 'images/Moon cloud mid rain.png'),
+            const SizedBox(height: 5),
+            const WeatherCard(
+                location: 'Toronto, Canada',
+                weatherCondition: 'Fast Wind',
+                temperature: '20°',
+                highLowTemperature: 'H:19°  L:21°',
+                iconPath: 'images/Moon cloud fast wind.png'),
+            const SizedBox(height: 5),
+            const WeatherCard(
+                location: 'Tokyo, Japan',
+                weatherCondition: 'Showers',
+                temperature: '13°',
+                highLowTemperature: 'H:16°  L:8°',
+                iconPath: 'images/Sun cloud angled rain.png'),
+          ],
         ),
       ),
     );
