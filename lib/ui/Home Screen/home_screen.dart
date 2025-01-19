@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/customized%20widgets/round_cards.dart';
-
+import 'package:weather_app/style/style.dart';
 import '../Weather Screen/weather_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,45 +20,41 @@ class HomeScreen extends StatelessWidget {
             fit: BoxFit.fill,
           ),
         ),
-
-        // SizedBox(
-        //   height: 98,
-        // ),
-        Column(
+        const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Montreal',
               style: TextStyle(
-                  color: Colors.white,
+                  color: whiteColor,
                   fontSize: 25,
                   fontWeight: FontWeight.w300),
             ),
-            const Text(
+            Text(
               '19°',
               style: TextStyle(
-                  color: Colors.white,
+                  color: whiteColor,
                   fontSize: 80,
                   fontWeight: FontWeight.w300),
             ),
             Text(
               'Mostly Clear',
               style: TextStyle(
-                  color: Colors.white.withOpacity(0.6),
+                  color: whiteColor1,
                   fontSize: 20,
                   fontWeight: FontWeight.w300),
             ),
-            const Text(
+            Text(
               'H:24°  L:18°',
               style: TextStyle(
-                  color: Colors.white,
+                  color:whiteColor,
                   fontSize: 20,
                   fontWeight: FontWeight.w300),
             ),
             // SizedBox(
             //   height: 5,
             // ),
-            const Image(
+            Image(
               image: AssetImage('images/House 4.png'),
             ),
           ],
@@ -68,10 +64,14 @@ class HomeScreen extends StatelessWidget {
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xff5936b4), Color(0xff362a84)])),
+
+              gradient: linearGradientHomeScreen
+              // LinearGradient(
+              //     begin: Alignment.topCenter,
+              //     end: Alignment.bottomCenter,
+              //     colors: [Color(0xff5936b4), Color(0xff362a84)])
+
+          ),
           width: MediaQuery.of(context).size.width,
           height: 280,
           child: Padding(
@@ -89,19 +89,19 @@ class HomeScreen extends StatelessWidget {
                     //       fontWeight: FontWeight.w500),
                     // ),
                     TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WeatherCardScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const WeatherCardScreen()));
                     }, child: const Text('Weekly Forecast',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: whiteColor,
                             fontSize: 14,
                             fontWeight: FontWeight.w500)
                     ),
                     ),
                     TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WeatherCardScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const WeatherCardScreen()));
                     }, child: const Text('Hourly Forecast',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: whiteColor,
                             fontSize: 14,
                             fontWeight: FontWeight.w500)),),
                   ],
@@ -169,14 +169,16 @@ class HomeScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 12, left: 94.0),
                           child: FloatingActionButton(
                             onPressed: () => print('Button Pressed'),
-                            backgroundColor: Colors.white,
+                            backgroundColor: whiteColor,
                             elevation: 10.0,
                             shape: RoundedRectangleBorder(
 
                                 borderRadius: BorderRadius.circular(60)),
                             child: const Icon(
                               Icons.add,
-                              color: Color(0xff48319D),
+                              // here magentaBlueColor will be used
+                              color: magentaBlueColor,
+                              // color: Color(0xff48319D),
                               size: 40.0,
                             ),
                           ),

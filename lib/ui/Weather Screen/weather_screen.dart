@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/customized%20widgets/weather_card.dart';
+import 'package:weather_app/style/style.dart';
 
 class WeatherCardScreen extends StatelessWidget {
   const WeatherCardScreen({super.key});
@@ -10,24 +11,22 @@ class WeatherCardScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xff2E335A),
-              Color(0xff1C1B33),
-            ]),
+        gradient: linearGradientWeatherScreen
       ),
       child: Scaffold(
-        backgroundColor: const Color(0xff26347d),
+        // patric blue color is used here
+        backgroundColor: patricBlueColor,
+        //const Color(0xff26347d),
         appBar: AppBar(
           automaticallyImplyLeading: true,
-          iconTheme: const IconThemeData(color: Colors.white),
+          iconTheme: const IconThemeData(color: whiteColor),
           title:  const Text(
             'Weather',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: whiteColor),
           ),
-          backgroundColor: const Color(0xff26347d),
+          // also patric color is used here
+          backgroundColor: patricBlueColor,
+          // const Color(0xff26347d),
         ),
         body: ListView(
           padding: const EdgeInsets.only(left: 15.0, right: 15, top: 10),
@@ -35,17 +34,19 @@ class WeatherCardScreen extends StatelessWidget {
           children: [
             TextFormField(
               decoration: InputDecoration(
-                  fillColor: const Color(0xff2E335A),
+                // also koamaru color is used here
+                  fillColor: koamaruBlueColor,
+                  //const Color(0xff2E335A),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 18),
+                  hintStyle: const TextStyle(color: greyColor, fontSize: 18),
                   hintText: 'Search for a city or airport',
                   prefixIcon: const Padding(
                     padding: EdgeInsets.only(left: 10.0),
                     child: Icon(
                       Icons.search,
-                      color: Colors.grey,
+                      color: greyColor,
                       size: 30.0,
                     ),
                   )),

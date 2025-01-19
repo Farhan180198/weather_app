@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/style/style.dart';
 class RoundCard extends StatelessWidget {
   final String time;
   final String temperature;
@@ -23,12 +24,8 @@ class RoundCard extends StatelessWidget {
       decoration: BoxDecoration(
         border:Border.all(width: 0.2, color: Colors.white) ,
         borderRadius: BorderRadius.circular(40,),
-        gradient: const LinearGradient(
-          colors: [ Colors.transparent, Color(0xFF48319D)], // Purple gradient
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-
-        ),
+        gradient:
+         linearGradientRoundCardScreen,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -36,7 +33,7 @@ class RoundCard extends StatelessWidget {
           Text(
             time,
             style: const TextStyle(
-              color: Colors.white,
+              color: whiteColor,
               fontSize: 14,
               fontWeight: FontWeight.w600,
             ),
@@ -49,14 +46,14 @@ class RoundCard extends StatelessWidget {
           Text(
             precipitation,
             style: const TextStyle(
-              color: Colors.white,
+              color: whiteColor,
               fontSize: 12,
             ),
           ),
           Text(
             temperature,
             style: const TextStyle(
-              color: Colors.white,
+              color: whiteColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),

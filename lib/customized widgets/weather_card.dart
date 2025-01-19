@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/style/style.dart';
 
 class WeatherCard extends StatelessWidget {
   final String location;
@@ -15,7 +16,8 @@ class WeatherCard extends StatelessWidget {
     required this.temperature,
     required this.highLowTemperature,
     required this.iconPath,
-    this.backgroundColor = const Color(0xff362A84), // Default background color
+    // cosmic blue color
+    this.backgroundColor =cosmicBlueColor, // Default background color
   });
 
   @override
@@ -25,7 +27,7 @@ class WeatherCard extends StatelessWidget {
     return Container(
 
       // width: 342,
-      width: screenWidth* 0.32,
+      width: screenWidth * 0.32,
       height: 200,
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
@@ -42,7 +44,7 @@ class WeatherCard extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 64,
                 fontWeight: FontWeight.w400,
-                color: Colors.white,
+                color: whiteColor,
               ),
             ),
             const SizedBox(width: 24.0),
@@ -60,7 +62,7 @@ class WeatherCard extends StatelessWidget {
                 highLowTemperature,
                 style: const TextStyle(
                   fontSize: 14,
-                  color: Colors.white60,
+                  color: whiteColor1,
                 ),
               ),
             ],
@@ -75,7 +77,7 @@ class WeatherCard extends StatelessWidget {
               location,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: whiteColor,
               ),
             ),
 
@@ -83,7 +85,7 @@ class WeatherCard extends StatelessWidget {
               weatherCondition,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: whiteColor,
               ),
             ),
           ],),
